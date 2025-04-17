@@ -6,7 +6,7 @@ This Streamlit application allows users to classify petition texts into EUROVOC 
 
 1. Clone this repository:
 ```
-git clone <your-repository-url>
+git clone github.com/Ramakrishnanewbie/NLP_FINAL_PROJECT
 cd petition-classification
 ```
 
@@ -15,7 +15,10 @@ cd petition-classification
 pip install -r requirements.txt
 ```
 
-3. Export your trained models from your Jupyter notebook:
+3. Export your trained models from your Jupyter notebook (Most important, otherwise streamlit won't run):
+
+* Github doesn't allow us toa dd pkl and pt files where the weights are saved due to storage limit. So, do make sure to update these to make sure the UI works. 
+
 ```python
 # Save the TF-IDF vectorizer
 joblib.dump(tfidf, "tfidf_vectorizer.pkl")
@@ -60,7 +63,4 @@ Based on the EURLEX dataset:
 | BERT+GRU | 0.529 | 0.860 | 0.382 |
 | BERT+BiLSTM | 0.298 | 0.855 | 0.181 |
 
-## License
-
-[Include your license information here]
 
